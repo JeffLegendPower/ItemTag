@@ -24,10 +24,8 @@ public class DenizenScriptRunAction extends Action {
 
     @Override
     public void execute(Player player, String text) {
-        String[] args = text.split(" ");
-        String script = args[0];
-        args = Arrays.copyOfRange(args, 1, args.length);
-        new DenizenUtils().runDenizenScript(player, script, args);
+        String script = text.split(" ")[0];
+        new DenizenUtils().runDenizenScript(player, script);
     }
 
     @Override
